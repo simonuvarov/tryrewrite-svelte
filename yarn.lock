@@ -84,6 +84,23 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@sveltejs/adapter-vercel@next":
+  version "1.0.0-next.15"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.15.tgz#1b86b62374d85bc2d9b9bfa31d5bf73f24900aa6"
+  integrity sha512-Fb85t1fktFP46HZEjmlF/TN9k95grger27FpvsKaNXSz1VTdKS8Sbq3l5hROetkRIgXzAfOb8FlJyLVpz9Go1g==
+  dependencies:
+    "@sveltejs/kit" "1.0.0-next.91"
+    esbuild "^0.11.12"
+
+"@sveltejs/kit@1.0.0-next.91":
+  version "1.0.0-next.91"
+  resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.91.tgz#9adc21d4b645ace3a2025b230c6219bc86653bc8"
+  integrity sha512-o2wjAnCMhpDNedyczQWwVQMRYRFhobTXQzBLpSentZXJjmImcdjI6InYXBe8wkilrpqHWxBqyc3VmbtBqXmxAA==
+  dependencies:
+    "@sveltejs/vite-plugin-svelte" "^1.0.0-next.7"
+    cheap-watch "^1.0.3"
+    sade "^1.7.4"
+
 "@sveltejs/kit@next":
   version "1.0.0-next.94"
   resolved "https://registry.yarnpkg.com/@sveltejs/kit/-/kit-1.0.0-next.94.tgz#9f50eb9e29862b7578682163e15978586aeb9931"
@@ -93,7 +110,7 @@
     cheap-watch "^1.0.3"
     sade "^1.7.4"
 
-"@sveltejs/vite-plugin-svelte@^1.0.0-next.9":
+"@sveltejs/vite-plugin-svelte@^1.0.0-next.7", "@sveltejs/vite-plugin-svelte@^1.0.0-next.9":
   version "1.0.0-next.9"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-1.0.0-next.9.tgz#409e20c030298e968c71d71bef141665c06e7bd9"
   integrity sha512-ySB/GJsZV3h3jqjq5WIiaxVFkJK6vqtG9gS7Iw6SfUH9ZiFNw5JjQF69g68j9cNep3q4yRIYiG5/pI3YIdXEuA==
@@ -458,6 +475,11 @@ enquirer@^2.3.5:
   integrity sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
   dependencies:
     ansi-colors "^4.1.1"
+
+esbuild@^0.11.12:
+  version "0.11.17"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.17.tgz#d2a929a918864ab3642178f4c0dc84784f863b53"
+  integrity sha512-Yj+rQATpLLU36ymg0/laLXn9FUoiGUl7mDPUJ0toQ5nXKFrj/rmIEkQ34T1GeiV2cP2SrT0G0s7xiNuDcsIyBg==
 
 esbuild@^0.9.3:
   version "0.9.7"

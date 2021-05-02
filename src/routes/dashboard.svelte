@@ -1,6 +1,6 @@
 <script lang="typescript">
 	import { onMount } from 'svelte';
-	import PaperCard from '../components/PaperCard.svelte';
+	import PaperList from '../components/PaperList.svelte';
 	import type { Paper } from '../services/paper.service';
 	import paperService from '../services/paper.service';
 
@@ -16,10 +16,5 @@
 </svelte:head>
 
 <div>
-	{#each papers as paper}
-		<PaperCard {paper} />
-	{:else}
-		<!-- this block renders when photos.length === 0 -->
-		<p>loading...</p>
-	{/each}
+	<PaperList {papers} />
 </div>
