@@ -2,8 +2,18 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://rsms.me/inter/inter.css" rel="preload" />
+		<style>
+			:root {
+				font-family: 'Inter', sans-serif;
+			}
+			@supports (font-variation-settings: normal) {
+				:root {
+					font-family: 'Inter var', sans-serif;
+				}
+			}
+		</style>
 
 		%svelte.head%
 	</head>
