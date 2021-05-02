@@ -26,10 +26,10 @@
 		<div class="w-full flex flex-col mx-auto max-w-md mt-8">
 			<form action="#" method="POST" on:submit|preventDefault={handleSubmit}>
 				<div class="input-group">
-					<Input bind:value={email} label="Email" />
-					<Input bind:value={password} class="mt-4" label="Password" />
+					<Input bind:value={email} label="Email" type="email" />
+					<Input bind:value={password} class="mt-4" label="Password" type="password" />
 				</div>
-				<Button class="mt-8">Sign in</Button>
+				<Button class="mt-8">Sign up</Button>
 			</form>
 		</div>
 		<div class="mt-6 text-sm">

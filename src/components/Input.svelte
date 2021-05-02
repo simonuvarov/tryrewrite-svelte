@@ -1,15 +1,23 @@
 <script lang="typescript">
 	export let label: string;
+
+	let inputType = 'text';
+	export { inputType as type };
+	export { className as class };
+
 	export let value = '';
 	let className = '';
-	export { className as class };
+
+	const handleInputType = (e) => {
+		e.target.type = inputType;
+	};
 </script>
 
 <div class={className}>
 	<label for={label.toLowerCase()}>
 		{label}
 	</label>
-	<input id={label.toLocaleLowerCase()} bind:value />
+	<input id={label.toLocaleLowerCase()} on:input={handleInputType} bind:value />
 </div>
 
 <style lang="postcss">
