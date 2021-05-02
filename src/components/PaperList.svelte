@@ -5,7 +5,7 @@
 	export let papers: Array<Paper>;
 </script>
 
-<ul>
+<ul class="divide-y">
 	{#each papers as paper}
 		<PaperCard {paper} />
 	{:else}
@@ -15,7 +15,6 @@
 </ul>
 
 <style>
-  li {
-    
-  }
+	li {
+	}
 </style>

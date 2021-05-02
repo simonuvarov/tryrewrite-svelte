@@ -21,35 +21,43 @@
 </svelte:head>
 
 <section>
-	<form action="#" method="POST" on:submit|preventDefault={handleSubmit}>
-		<div class="input-group">
-			<Input bind:value={email} />
-			<Input bind:value={password} />
+	<article>
+		<h2 class="text-left text-2xl font-semibold text-gray-700">Sign in to your account</h2>
+		<div class="w-full flex flex-col mx-auto max-w-md mt-8">
+			<form action="#" method="POST" on:submit|preventDefault={handleSubmit}>
+				<div class="input-group">
+					<Input bind:value={email} label="Email" />
+					<Input bind:value={password} class="mt-4" label="Password" />
+				</div>
+				<Button class="mt-8">Sign in</Button>
+			</form>
 		</div>
-		<Button>Sign in</Button>
-	</form>
+		<div class="mt-6 text-sm ">
+			<span class="text-gray-500 ">Don't have an account?</span>
+			<a
+				href="/signup"
+				class="ml-2 font-medium text-blue-600 hover:text-blue-500 transition-colors"
+			>
+				Sign up
+			</a>
+		</div>
+	</article>
 </section>
 
-<style>
+<style lang="postcss">
 	section {
-		display: flex;
-		flex-direction: column;
-		min-height: 100%;
-		justify-content: center;
-		align-items: center;
+		@apply flex bg-gray-50 min-h-screen flex-col justify-center;
 	}
 
 	form {
-		padding: 24px;
-		margin-top: 6rem;
-		display: flex;
-		flex-direction: column;
-		max-width: 384px;
-		width: 100%;
+		@apply flex flex-col;
+	}
+
+	article {
+		@apply bg-white px-20 py-16 rounded-xl mx-auto shadow-md border border-gray-100 w-full max-w-xl;
 	}
 
 	.input-group {
-		display: flex;
-		flex-direction: column;
+		@apply space-y-6;
 	}
 </style>

@@ -5,25 +5,11 @@
 
 <button class={className}><slot /></button>
 
-<style>
+<style lang="postcss">
 	button {
-		display: flex;
-		border-radius: 6px;
-		padding-top: 8px;
-		padding-bottom: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		font-size: 1rem;
-		background-color: #2563eb;
-		border: 1px solid #e5e7eb;
-		color: #fff;
-		line-height: 150%;
-		margin-bottom: 16px;
-		box-shadow: none;
-		justify-content: center;
-		cursor: pointer;
+		@apply px-4 py-2 bg-blue-600  text-white rounded-md text-base leading-8 font-medium transition;
 	}
 	button:hover {
-		background-color: #3b82f6;
+		@apply bg-blue-500;
 	}
 </style>

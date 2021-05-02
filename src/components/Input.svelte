@@ -1,25 +1,28 @@
 <script lang="typescript">
+	export let label: string;
 	export let value = '';
 	let className = '';
 	export { className as class };
 </script>
 
-<input bind:value class={className} />
+<div class={className}>
+	<label for={label.toLowerCase()}>
+		{label}
+	</label>
+	<input id={label.toLocaleLowerCase()} bind:value />
+</div>
 
-<style>
+<style lang="postcss">
+	label {
+		@apply block text-sm text-gray-600 font-medium;
+	}
+
 	input {
-		display: flex;
-		border-radius: 6px;
-		padding-top: 8px;
-		padding-bottom: 8px;
-		padding-left: 16px;
-		padding-right: 16px;
-		font-size: 1rem;
-		background-color: white;
-		border: 1px solid #e5e7eb;
-		color: #374151;
-		line-height: 150%;
-		margin-bottom: 16px;
-		box-shadow: none;
+		@apply block w-full px-4 py-2 border border-gray-200 rounded-md text-base leading-8
+			text-gray-700 outline-none transition-shadow transition mt-2;
+	}
+
+	input:focus {
+		@apply border-blue-400 ring;
 	}
 </style>

@@ -5,25 +5,15 @@
 </script>
 
 <li class="hover:bg-gray-50 hover:cursor-pointer flex justify-between items-center">
-	<div class="flex flex-col flex-shrink-0 py-4 px-2 max-w-lg w-full">
-		<div class="font-medium truncate text-gray-800 paper-question">
-			{paper.question}
+	<a href={`/paper/${paper.id}`}>
+		<div class="flex flex-col flex-shrink-0 py-4 px-2 max-w-lg w-full">
+			<div class="font-medium truncate text-gray-800 paper-question">
+				{paper.question}
+			</div>
+			<div class="truncate mt-2 text-gray-600 paper-body">{paper.body}</div>
 		</div>
-		<div class="truncate mt-2 text-gray-600 paper-body">{paper.body}</div>
-	</div>
-	<div class="flex font-medium text-gray-800 px-4">
-		{parseFloat(paper.overallBand.toString()).toFixed(1)}
-	</div>
+		<div class="flex font-medium text-gray-800 px-4">
+			{parseFloat(paper.overallBand.toString()).toFixed(1)}
+		</div>
+	</a>
 </li>
-
-<style>
-	li {
-		display: flex;
-		justify-content: space-between;
-	}
-	.paper-question {
-		font-style: normal;
-		font-size: 25px;
-		color: '#4B5563';
-	}
-</style>
