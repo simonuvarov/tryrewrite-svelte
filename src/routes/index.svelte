@@ -8,7 +8,7 @@
 	<a class="text-blue-600 underline" href="/signup">Get started now</a>
 </section>
 
-<style>
+<style style lang="postcss">
 	section {
 		display: flex;
 		flex-direction: column;
@@ -21,7 +21,7 @@
 	.hero-title {
 		font-size: 72px;
 		max-width: 512px;
-		text-align: center;
+		@apply text-center;
 		font-weight: bold;
 	}
 
