@@ -13,8 +13,3 @@
 		<p>loading...</p>
 	{/each}
 </ul>
-
-<style>
-	li {
-	}
-</style>
