@@ -46,9 +46,13 @@ export enum CRITERIA_TYPE {
 }
 
 const getPaper = (id: string) => {
-	return axios.get<Paper>(`/api/papers/${id}`, {
-		headers: { Authorization: `Bearer ${getAccessTokenFromStorage()}` }
-	});
+	return axios.get<Paper>(
+		`http://localhost:3000/papers/${id}`,
+
+		{
+			headers: { Authorization: `Bearer ${getAccessTokenFromStorage()}` }
+		}
+	);
 };
 
 const getAllPapers = () => {
@@ -68,7 +72,7 @@ const gradePaper = (id: string, input: { question: string; body: string }) => {
 		issues: Array<Issue>;
 		bands: { ta: number; cc: number; lr: number; gr: number; overall: number };
 	}>(
-		`/api/papers/${id}`,
+		`http://localhost:3000/papers/${id}`,
 		{
 			question: input.question,
 			body: input.body
