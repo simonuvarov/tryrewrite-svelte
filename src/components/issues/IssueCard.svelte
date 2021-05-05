@@ -6,16 +6,10 @@
 
 	export let issue: Issue;
 
-	let expanded = false;
+	export let expanded = false;
 </script>
 
-<li
-	class:expanded
-	class:collapsed={!expanded}
-	on:click={() => {
-		expanded = true;
-	}}
->
+<li class:expanded class:collapsed={!expanded} on:click>
 	<CriteriaLabel type={issue.affects} />
 	<div class="mt-4 space-y-1">
 		<h3 class="text-lg leading-6 font-medium text-gray-800">
