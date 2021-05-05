@@ -1,6 +1,7 @@
 <script lang="typescript">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import IssueList from '../../components/issues/IssueList.svelte';
 	import type { Issue } from '../../services/paper.service';
 	import paperService from '../../services/paper.service';
 
@@ -26,11 +27,27 @@
 	};
 </script>
 
-<div>
-	<p>{question}</p>
-	<p>{body}</p>
-	<button on:click={onCheck}>Check</button>
-	{#if issues}
-		<pre>{JSON.stringify(issues,null,2)}</pre>
-	{/if}
+<div class="flex min-h-full">
+	<div class="w-full" id="left">
+		<p>{question}</p>
+		<p>{body}</p>
+		<button on:click={onCheck}>Check</button>
+	</div>
+	<div class="w-full h-screen" id="right">
+		{#if issues}
+			<IssueList {issues} />
+		{/if}
+	</div>
 </div>
+
+<style>
+	/* Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+</style>
