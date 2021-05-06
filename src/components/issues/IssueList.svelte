@@ -11,7 +11,7 @@
 	};
 </script>
 
-<ul class="space-y-8 mx-auto flex flex-col items-end px-12">
+<ul class="space-y-8">
 	{#each issues as issue}
 		<IssueCard {issue} expanded={issue.id === expandedIssueId} on:click={() => expand(issue.id)} />
 	{/each}
